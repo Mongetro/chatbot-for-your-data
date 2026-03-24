@@ -146,36 +146,45 @@ deactivate
 
 **Docker Issues**
 
-Problem | Solution
-docker: command not found | Install Docker first (see prerequisites)
-Permission denied (Linux) | sudo usermod -aG docker $USER then logout/login
-Port 8000 already in use | Change port in docker-compose.yml: ports: "8080:8000"
-Container exits immediately | Check logs: docker logs <container_id>
+```sh
+
+Problem	                      |     Solution
+docker: command not found     |     Install Docker first (see prerequisites)
+Permission denied (Linux)	    |     sudo usermod -aG docker $USER then logout/login
+Port 8000 already in use	    |     Change port in docker-compose.yml: ports: "8080:8000"
+Container exits immediately	  |     Check logs: docker logs <container_id>
+```
 
 **Groq API Issues**
 
-Problem | Solution
-GROQ_API_KEY not set | Ensure .env file exists with GROQ_API_KEY=your_key
-Rate limit exceeded | Free tier has limits. Wait a few seconds or upgrade
-Model not available | Use llama-3.1-8b-instant (free tier supported)
+```sh
+Problem               |     Solution
+GROQ_API_KEY not set  |     Ensure .env file exists with GROQ_API_KEY=your_key
+Rate limit exceeded	  |     Free tier has limits. Wait a few seconds or upgrade
+Model not available	  |     Use llama-3.1-8b-instant (free tier supported)
+```
 
 **Python Installation Issues**
 
-Problem | Solution
-numpy: No module named | pip install numpy==1.26.4
-np.float\_ error | NumPy 2.0 incompatibility. Install NumPy 1.26.4
-langchain version conflicts | pip install -r requirements.txt (use exact versions)
+```sh
+Problem                     |     Solution
+numpy: No module named      |     pip install numpy==1.26.4
+np.float_ error             |     NumPy 2.0 incompatibility. Install NumPy 1.26.4
+langchain version conflicts |     pip install -r requirements.txt (use exact versions)
+```
 
 ### 🛠️ Technology Stack
 
-Component | Technology
-Backend Framework | Flask 3.1.0
-LLM Provider | Groq (Llama 3.1 8B)
-Vector Database | ChromaDB
-Embeddings | Sentence Transformers (all-MiniLM-L6-v2)
-Document Processing | PyPDF2, LangChain
-Frontend | HTML5, CSS3, JavaScript, Bootstrap 4
-Containerization | Docker, Docker Compose
+```sh
+Component               |     Technology
+Backend Framework       |     Flask 3.1.0
+LLM Provider            |     Groq (Llama 3.1 8B)
+Vector Database         |     ChromaDB
+Embeddings              |     Sentence Transformers (all-MiniLM-L6-v2)
+Document Processing     |     PyPDF2, LangChain
+Frontend                |     HTML5, CSS3, JavaScript, Bootstrap 4
+Containerization        |     Docker, Docker Compose
+```
 
 ---
 
