@@ -1,0 +1,27 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    container_name: chatbot-for-your-data
+    ports:
+      - '8000:8000'
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - MAX_NEW_TOKENS=${MAX_NEW_TOKENS:-256}
+      - TEMPERATURE=${TEMPERATURE:-0.1}
+      - CHUNK_SIZE=${CHUNK_SIZE:-1024}
+      - CHUNK_OVERLAP=${CHUNK_OVERLAP:-64}
+      - RETRIEVAL_K=${RETRIEVAL_K:-3}
+      - EMBEDDINGS_MODEL=${EMBEDDINGS_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+    volumes:
+      # Optional: persist uploaded files
+      - ./uploads:/app/uploads
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:8000/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
