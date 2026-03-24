@@ -173,7 +173,7 @@ np.float_ error             |     NumPy 2.0 incompatibility. Install NumPy 1.26.
 langchain version conflicts |     pip install -r requirements.txt (use exact versions)
 ```
 
-### 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 ```sh
 Component               |     Technology
