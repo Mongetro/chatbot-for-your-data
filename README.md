@@ -86,7 +86,7 @@ Open your browser and go to: http://localhost:8000
 Stop the Container
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### Option 2: Run Locally (without Docker)
