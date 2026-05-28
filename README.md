@@ -32,7 +32,7 @@ A powerful Retrieval-Augmented Generation (RAG) chatbot that answers questions b
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/chatbot-for-your-data.git
+git clone https://github.com/Mongetro/chatbot-for-your-data.git
 cd chatbot-for-your-data
 ```
 
