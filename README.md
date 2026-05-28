@@ -72,7 +72,7 @@ No Python installation needed. Works on any operating system.
 
 ```bash
 # Build and run with Docker Compose
-docker-compose up -d
+docker compose up -d
 
 # Or run with Docker directly
 docker build -t chatbot-for-your-data .
